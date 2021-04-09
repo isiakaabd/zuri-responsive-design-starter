@@ -35,12 +35,13 @@ ul li {
     margin: 0 2vw;
     list-style: none;
     font-size: 1.1rem;
+   
 }
 
 ul li a {
     text-decoration: none;
     color: #88949B;
-    padding: 0.5vw;
+    padding: 0.8vw;
 }
 
 ul li a:hover {
@@ -64,6 +65,7 @@ ul li a:hover {
     margin: 5px;
     background-color: white;
     border-radius: 10px;
+    transition: all .3 ease;
 }
 
 div.hero-section {
@@ -130,7 +132,6 @@ div.background {
     box-shadow: 2px 2px 15px 0 rgb(135 135 135 / 40%);
     padding: 15px 40px;
     width: 50%; 
-   /* height: 220px; */
     position: relative;
 }
 
@@ -387,15 +388,17 @@ div.footer h6 {
     padding-top: 6rem;
 }
 
+.burger.open .line1{
+    transform: rotate(-45deg) translate(-5px, 6px);
 
-.toggle .line1{
-    transform: rotate(-45deg translate(-5px, 6px));
+    
 }
-.toggle .line2{
+.burger.open .line2{
    opacity: 0;
 }
-.toggle .line3{
-    transform: rotate(45deg translate(-5px, 6px));
+.burger.open .line3{
+    transform: rotate(45deg) translate(-5px, -6px);
+
 }
 
 
@@ -417,16 +420,26 @@ div.footer h6 {
     
     .burger{
         display: block;
-        /* height: 100%; */
+    }
+
+    ul li {
+    
+        padding: 12px;
+        border-bottom: 2px solid white !important;
+        width: 100%;
+        text-align: center;
     }
     div.logo{
         align-self: flex-start;
         margin-left: 0;
     }
+   
 
    .nav-links.active{
        display: flex;
    }
+
+   /* hero section */
 
     .hero-section{
         width: 100%;
@@ -445,7 +458,7 @@ div.footer h6 {
     
 }
 
-@media(max-width: 320px){
+@media(max-width: 600px){
     .hero-background{
         width: fit-content;
         flex-direction: column;
